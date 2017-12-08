@@ -21,7 +21,63 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/figuring-it-all-out.html">Figuring It All Out</a></h1>
+                    <h1 class="entry-title"><a href="/git-commits-should-look-professional.html">Git Commits Should Look Professional???</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-12-07T23:29:00-07:00">
+                Published: Thu 07 December 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/thomas-dunlap.html">Thomas Dunlap</a>
+        </address>
+<p>In <a href="/category/main.html">main</a>.</p>
+<p>tags: <a href="/tag/git-commits.html">git commits</a> </p>
+</footer><!-- /.post-info --><p>Did you know you're supposed to format your commits? And not just write vaguely entertaining reminders to yourself like "Filled in some_function() but there's 3 nested for loops WHY WOULD GOD DO THIS TO ME?!" Just kidding, I would never write that. You can't write a commit message with exclamation points.  </p>
+<p>This is <a href="http://udacity.github.io/git-styleguide/">the git commit formatting Udacity uses</a>:</p>
+<div class="highlight"><pre><span></span><span class="n">feat</span><span class="o">:</span> <span class="n">Summarize</span> <span class="n">changes</span> <span class="k">in</span> <span class="n">around</span> <span class="mi">50</span> <span class="n">characters</span> <span class="n">or</span> <span class="n">less</span>
+
+<span class="n">More</span> <span class="n">detailed</span> <span class="n">explanatory</span> <span class="n">text</span><span class="o">,</span> <span class="k">if</span> <span class="n">necessary</span><span class="o">.</span> <span class="n">Wrap</span> <span class="n">it</span> <span class="n">to</span> <span class="n">about</span> <span class="mi">72</span>
+<span class="n">characters</span> <span class="n">or</span> <span class="n">so</span><span class="o">.</span> <span class="n">In</span> <span class="n">some</span> <span class="n">contexts</span><span class="o">,</span> <span class="n">the</span> <span class="n">first</span> <span class="n">line</span> <span class="k">is</span> <span class="n">treated</span> <span class="k">as</span> <span class="n">the</span>
+<span class="n">subject</span> <span class="n">of</span> <span class="n">the</span> <span class="n">commit</span> <span class="n">and</span> <span class="n">the</span> <span class="n">rest</span> <span class="n">of</span> <span class="n">the</span> <span class="n">text</span> <span class="k">as</span> <span class="n">the</span> <span class="n">body</span><span class="o">.</span> <span class="n">The</span>
+<span class="n">blank</span> <span class="n">line</span> <span class="n">separating</span> <span class="n">the</span> <span class="n">summary</span> <span class="n">from</span> <span class="n">the</span> <span class="n">body</span> <span class="k">is</span> <span class="n">critical</span> <span class="o">(</span><span class="n">unless</span>
+<span class="n">you</span> <span class="n">omit</span> <span class="n">the</span> <span class="n">body</span> <span class="n">entirely</span><span class="o">);</span> <span class="n">various</span> <span class="n">tools</span> <span class="n">like</span> <span class="err">`</span><span class="n">log</span><span class="err">`</span><span class="o">,</span> <span class="err">`</span><span class="n">shortlog</span><span class="err">`</span>
+<span class="n">and</span> <span class="err">`</span><span class="n">rebase</span><span class="err">`</span> <span class="n">can</span> <span class="kd">get</span> <span class="n">confused</span> <span class="k">if</span> <span class="n">you</span> <span class="n">run</span> <span class="n">the</span> <span class="n">two</span> <span class="n">together</span><span class="o">.</span>
+
+<span class="n">Explain</span> <span class="n">the</span> <span class="n">problem</span> <span class="n">that</span> <span class="k">this</span> <span class="n">commit</span> <span class="k">is</span> <span class="n">solving</span><span class="o">.</span> <span class="n">Focus</span> <span class="n">on</span> <span class="n">why</span> <span class="n">you</span>
+<span class="n">are</span> <span class="n">making</span> <span class="k">this</span> <span class="n">change</span> <span class="k">as</span> <span class="n">opposed</span> <span class="n">to</span> <span class="n">how</span> <span class="o">(</span><span class="n">the</span> <span class="n">code</span> <span class="n">explains</span> <span class="n">that</span><span class="o">).</span>
+<span class="n">Are</span> <span class="n">there</span> <span class="n">side</span> <span class="n">effects</span> <span class="n">or</span> <span class="n">other</span> <span class="n">unintuitive</span> <span class="n">consequences</span> <span class="n">of</span> <span class="k">this</span>
+<span class="n">change</span><span class="o">?</span> <span class="n">Here</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">the</span> <span class="n">place</span> <span class="n">to</span> <span class="n">explain</span> <span class="n">them</span><span class="o">.</span>
+
+<span class="n">Further</span> <span class="n">paragraphs</span> <span class="n">come</span> <span class="n">after</span> <span class="n">blank</span> <span class="n">lines</span><span class="o">.</span>
+
+ <span class="o">-</span> <span class="n">Bullet</span> <span class="n">points</span> <span class="n">are</span> <span class="n">okay</span><span class="o">,</span> <span class="n">too</span>
+
+ <span class="o">-</span> <span class="n">Typically</span> <span class="n">a</span> <span class="n">hyphen</span> <span class="n">or</span> <span class="n">asterisk</span> <span class="k">is</span> <span class="n">used</span> <span class="k">for</span> <span class="n">the</span> <span class="n">bullet</span><span class="o">,</span> <span class="n">preceded</span>
+   <span class="n">by</span> <span class="n">a</span> <span class="n">single</span> <span class="n">space</span><span class="o">,</span> <span class="k">with</span> <span class="n">blank</span> <span class="n">lines</span> <span class="k">in</span> <span class="n">between</span><span class="o">,</span> <span class="n">but</span> <span class="n">conventions</span>
+   <span class="n">vary</span> <span class="n">here</span>
+
+<span class="n">If</span> <span class="n">you</span> <span class="n">use</span> <span class="n">an</span> <span class="n">issue</span> <span class="n">tracker</span><span class="o">,</span> <span class="n">put</span> <span class="n">references</span> <span class="n">to</span> <span class="n">them</span> <span class="n">at</span> <span class="n">the</span> <span class="n">bottom</span><span class="o">,</span>
+<span class="n">like</span> <span class="k">this</span><span class="o">:</span>
+
+<span class="n">Resolves</span><span class="o">:</span> <span class="err">#</span><span class="mi">123</span>
+<span class="n">See</span> <span class="n">also</span><span class="o">:</span> <span class="err">#</span><span class="mi">456</span><span class="o">,</span> <span class="err">#</span><span class="mi">789</span>
+</pre></div>
+
+
+<p>That's way more professional than about a third of my commits that just say "Updated <filename>."  But now I know! And you know! Education!!</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/figuring-it-all-out.html" rel="bookmark"
+                           title="Permalink to Figuring It All Out">Figuring It All Out</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2017-12-05T18:30:00-07:00">
                 Published: Tue 05 December 2017
@@ -32,17 +88,11 @@
         </address>
 <p>In <a href="/category/main.html">main</a>.</p>
 <p>tags: <a href="/tag/pelican.html">pelican</a> </p>
-</footer><!-- /.post-info --><h1>Figuring It All about</h1>
-<p>I have little idea how this blog works.  I know we're supposed to lay out things and explain things like we're experts, and I will eventually, but for future readers admiring my tremendous insights (sarcasm?), know that when I started this I had no clue.  </p>
-<p>I spent a significant amount of time today getting the index.html page looking...not great, but more professional.  Then I added a new post, typed <code>pelican content/</code> into my command line, and it deleted all my work and restored this crappy default blog theme.</p>
-<p>I wept (on the inside because I'm such a tuffy), but tomorrow's a new day and I'll google around and try again. That's the main piece of advice I could give to anyone at the moment: keep trying. For me, it helps to have a few projects going so I can change tasks if I start getting frustrated with one particular project.</p>
-<p>People will also tell you to take breaks too. However, sometimes learning has time constraints where breaks are more anxiety inducing than they're worth.  So what's the point of a break?  It's to let your mind rest and drift as it makes new connections.  Sometimes people will read or drive or exercise or eat as breaks.  So it's not really doing "nothing", but doing another task that you don't have to think about.  So why not let that other task also be studying?</p>
-<p>What I've been doing recently is doing extremely easy review problems whenever my brain needs a break.  They give my brain a rest because they're so easy my brain isn't using much energy to solve them, but I'm still reviewing and solidifying my knowledge.  That's my first piece of advice: do incredibly easy, mindless review problems (that are hopefully marginally fun) during some of your breaks to review while resting for your next pass at learning harder concepts. </p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                <p>I have little idea how this blog works.  I know we're supposed to lay out things and explain things like we're experts, and I will eventually, but for future readers admiring my tremendous insights (sarcasm?), know that when I started this I had no clue.  </p>
+<p>I spent a significant amount …</p>
+                <a class="readmore" href="/figuring-it-all-out.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
