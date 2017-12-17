@@ -53,16 +53,29 @@ be modified after it has been created     <ul>
 </li>
 </ul>
 </li>
-<li>Compare the strengths and weaknesses of lists vs. dictionaries.</li>
+<li>Compare the strengths and weaknesses of lists vs. dictionaries.<ul>
+<li>Lists and dictionaries are both mutable data storage "containers" for storing a variety or objects.  Lists are ordered, and you potentially have to iterate through all the values to search the object inside it.  Dictionaries are unordered, and the hash maps of their immutable keys allow for O(1) recall speed, but the storage of the key:item pairings takes up more memory.</li>
+</ul>
+</li>
 <li>Choose the appropriate collection (dict, Counter, defaultdict) to simplify a problem.</li>
-<li>Compare the strengths and weaknesses of lists vs. generators.</li>
-<li>Write pythonic code.
-Writing Pythonic code means we are using the language in such a way that makes our code more readable while (often) at the same time using Python’s power to make your solution more optimal<ul>
+<li>Compare the strengths and weaknesses of lists vs. generators.<ul>
+<li><em>Generators</em> - Allow us to build up an iterator that evaluates lazily (only loads values into memory when explicitly needed to perform some calculation/operation)<ul>
+<li><code>xrange()</code> is the generator equivalent of <code>range()</code></li>
+<li><code>izip()</code> is the generator equivalent of <code>zip()</code></li>
+<li><code>iteritems()</code> on a dictionary is the generator equivalent of <code>items()</code></li>
+</ul>
+</li>
+<li>Use a generator unless you need to use all items at once</li>
+<li>If the data can’t all fit in memory at the same time, then we are forced to use a generator (common in image processing or large data applications)</li>
+</ul>
+</li>
+<li>Write pythonic code.<ul>
+<li>Writing Pythonic code means we are using the language in such a way that makes our code more readable while (often) at the same time using Python’s power to make your solution more optimal</li>
 <li>Using <code>enumerate()</code> if we need to use the index</li>
 <li>Using <code>with</code> statements when working with files</li>
 <li>Using <code>izip()</code> to iterate over two lists at the same time</li>
 <li>Using a set to check membership list (and other) comprehensions <code>squares = [x**2 for x in xrange(1000)]</code></li>
-<li><code>if x:</code> instead of <code>if x == True:</code> </li>
+<li><code>if x:</code> instead of <code>if x == True:</code></li>
 <li><a href="https://www.python.org/dev/peps/pep-0008/">Pep8 Style Guide</a></li>
 <li><a href="http://python-future.org/imports.html">Python 2 vs 3 Import Guide</a></li>
 </ul>
@@ -70,8 +83,16 @@ Writing Pythonic code means we are using the language in such a way that makes o
 </ol>
 <h4><strong>2. Version Control / Git</strong></h4>
 <ol>
-<li>Explain the basic function and purpose of version control.</li>
-<li>Use a basic Git workflow to track project changes over time, share code, and write useful commit messages.</li>
+<li>Explain the basic function and purpose of version control.<ul>
+<li>VC allows you to modify code while always having a backup copy.  It also can allow multiple programmers to work on the same code simultaneously, improving efficiency.</li>
+</ul>
+</li>
+<li>Use a basic Git workflow to track project changes over time, share code, and write useful commit messages.<ul>
+<li><a href="https://github.com/JCardenasRdz/SpringBoard/blob/master/Reference/1-github-git-cheat-sheet.pdf">Git and Github Command Cheetsheet</a></li>
+<li><a href="https://git-scm.com/doc">Git documentation</a></li>
+<li><a href="https://help.github.com/">GitHub Help</a></li>
+</ul>
+</li>
 </ol>
 <h4><strong>3. OOP</strong></h4>
 <ol>
