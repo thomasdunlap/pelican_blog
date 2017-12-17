@@ -32,23 +32,23 @@
 <h4><strong>1. Python</strong></h4>
 <ol>
 <li>Explain the difference between mutable and immutable types and their relationship to dictionaries.<ul>
-<li>Mutable - Refers to a data structure whose state can be altered after it has been created<ul>
-<li>Lists - ordered, dynamic collections that are meant for storing collections of data about disparate objects (e.g. different types) (type list)</li>
-<li>Dictionaries - unordered collections of key-value pairs, where each key has to be unique and immutable (type dict)<ul>
-<li>get - Takes a key from which to return the associated value, or a default argument if that key is not in the dictionary</li>
-<li>iteritems - Returns a generator that can be used to iterate over the key, value pairs of the dictionary</li>
-<li>update - Update one dict with the key, value pairs</li>
+<li><em>Mutable</em> - Refers to a data structure whose state can be altered after it has been created<ul>
+<li><em>Lists</em> - ordered, dynamic collections that are meant for storing collections of data about disparate objects (e.g. different types) (type list)</li>
+<li><em>Dictionaries</em> - unordered collections of key-value pairs, where each key has to be unique and immutable (type dict)<ul>
+<li><code>.get()</code> - Takes a key from which to return the associated value, or a default argument if that key is not in the dictionary</li>
+<li><code>.iteritems()</code> - Returns a generator that can be used to iterate over the key, value pairs of the dictionary</li>
+<li><code>.update()</code> - Update one dict with the key, value pairs</li>
 </ul>
 </li>
-<li>Sets - unordered collections of unique keys, where each key is immutable (type set)<ul>
+<li><em>Sets</em> - unordered collections of unique keys, where each key is immutable (type set)<ul>
 <li>empty curly brackets <code>{}</code> are interpreted as a dict. Initiate with <code>my_set = set()</code></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Immutability - Refers to a data structure whose state cannot
+<li><em>Immutability</em> - Refers to a data structure whose state cannot
 be modified after it has been created     <ul>
-<li>Tuples - ordered, static collections that are meant for storing unchanging pieces of data (type tuple)  </li>
+<li><em>Tuples</em> - ordered, static collections that are meant for storing unchanging pieces of data (type tuple)  </li>
 </ul>
 </li>
 </ul>
@@ -56,9 +56,17 @@ be modified after it has been created     <ul>
 <li>Compare the strengths and weaknesses of lists vs. dictionaries.</li>
 <li>Choose the appropriate collection (dict, Counter, defaultdict) to simplify a problem.</li>
 <li>Compare the strengths and weaknesses of lists vs. generators.</li>
-<li>Write pythonic code.</li>
+<li>Write pythonic code.
+Writing Pythonic code means we are using the language in such a way that makes our code more readable while (often) at the same time using Python’s power to make your solution more optimal<ul>
+<li>Using <code>enumerate()</code> if we need to use the index</li>
+<li>Using <code>with</code> statements when working with files</li>
+<li>Using <code>izip()</code> to iterate over two lists at the same time</li>
+<li>Using a set to check membership list (and other) comprehensions <code>squares = [x**2 for x in xrange(1000)]</code></li>
+<li><code>if x:</code> instead of <code>if x == True:</code> </li>
 <li><a href="https://www.python.org/dev/peps/pep-0008/">Pep8 Style Guide</a></li>
 <li><a href="http://python-future.org/imports.html">Python 2 vs 3 Import Guide</a></li>
+</ul>
+</li>
 </ol>
 <h4><strong>2. Version Control / Git</strong></h4>
 <ol>
