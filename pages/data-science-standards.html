@@ -98,8 +98,41 @@ be modified after it has been created     <ul>
 <ol>
 <li>Given the code for a python class, instantiate a python object and call the methods and list the attributes.</li>
 <li>Write the python code for a simple class.</li>
-<li>Match key “magic” methods to their functionality.</li>
-<li>Design a program or algorithm in object oriented fashion.</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ClassName</span><span class="p">:</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameter1</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">var</span> <span class="o">=</span> <span class="n">parameter1</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">var2</span> <span class="o">=</span> <span class="n">p2</span>
+
+  <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Return a text description.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;{} of {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">var</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">var2</span><span class="p">)</span>
+
+  <span class="nd">@property</span> <span class="c1"># Field can&#39;t be changed w/o making setter (@color.setter)</span>
+  <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_c_map</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">p2</span><span class="p">]</span>
+
+  <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elem</span><span class="p">):</span>
+  <span class="sd">&#39;&#39;&#39;Perform map operation on an element&#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_impl</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">_impl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elem</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+  <span class="k">def</span> <span class="nf">method_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p3</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">var2</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">var</span> <span class="o">*</span> <span class="n">p3</span>
+</pre></div>
+
+
+<ol>
+<li>
+<p>Match key “magic” methods to their functionality.
+Full list/tutorial here:
+http://www.diveintopython3.net/special-method-names.html</p>
+</li>
+<li>
+<p>Design a program or algorithm in object oriented fashion.</p>
+</li>
 <li>Compare and contrast functional and object oriented programming.<ul>
 <li>In OOP the user creates and defines a new data type, which it's own attributes (data), and methods (operations).  This new class can then be used to create objects.</li>
 <li>In functional programming, your program just uses functions and does not create an entirely new class to organize data around.</li>
@@ -123,7 +156,13 @@ be modified after it has been created     <ul>
 <ol>
 <li>Explain/use the relationship between DataFrame and Series</li>
 <li>Know how to set, reset indexes</li>
-<li>Use iloc, loc, ix, and iat appropriately</li>
+<li>Use iloc, loc, ix, and iat appropriately<ul>
+<li><code>loc</code>: label-based search.</li>
+<li><code>iloc</code>: index-based search.</li>
+<li><code>ix</code>: both label and index-based.</li>
+<li><code>iat</code>: fast scaler value finding (<code>.iat([x,y])</code>).  </li>
+</ul>
+</li>
 <li>Use index alignment and know when it applies</li>
 <li>Use Split-Apply-Combine Methods</li>
 <li>Be able to read and write data to pandas</li>
@@ -207,7 +246,11 @@ be modified after it has been created     <ul>
 <li>t-test</li>
 <li>2 sample t-test (one-sided and two-sided)</li>
 <li>2 sample z-test (one-sided and two-sided)</li>
-<li>Define p-value, Type I error, Type II error, significance level and discuss their significance in an example problem.</li>
+<li>Define p-value, Type I error, Type II error, significance level and discuss their significance in an example problem.<ul>
+<li>Type I error: (false positive) Rejecting the null hypothesis when it was True</li>
+<li>Type 2 error: (false negative) Deciding the null hypothesis is correct when it is not</li>
+</ul>
+</li>
 <li>Account for the multiple comparisons problem via Bonferroni correction.</li>
 <li>Compute the difference of two independent random normal variables.</li>
 <li>Discuss when to use an A/B test to evaluate the efficacy of a treatment</li>
