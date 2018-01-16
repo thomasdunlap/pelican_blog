@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Data Science Standards: Python</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Welcome to the Machine Learning Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/pages/data-science-standards.html">Data Science Standards</a></li>
+                    <li><a href="/pages/deep-learning.html">Deep Learning</a></li>
+                    <li><a href="/pages/math.html">Math</a></li>
+                    <li class="active"><a href="/category/main.html">main</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/data-science-standards-python.html" rel="bookmark"
+           title="Permalink to Data Science Standards: Python">Data Science Standards: Python</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-12-07T23:29:00-07:00">
+                Published: Thu 07 December 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/thomas-dunlap.html">Thomas Dunlap</a>
+        </address>
+<p>In <a href="/category/main.html">main</a>.</p>
+<p>tags: <a href="/tag/data-science-standards-python.html">data-science-standards python</a> </p>
+</footer><!-- /.post-info -->      <h4>Part 1 of 43</h4>
+<p>This is the first in a series of questions and answers about core data science topics.  See more standards on my <a href="https://thomasdunlap.github.io/pages/data-science-standards.html">Data Science Standards page</a>.</p>
+<h4><strong>1. Python</strong></h4>
+<ol>
+<li>Explain the difference between mutable and immutable types and their relationship to dictionaries.<ul>
+<li><strong>Mutable</strong> - Refers to a data structure whose state can be altered after it has been created<ul>
+<li><strong>Lists</strong> - ordered, dynamic collections that are meant for storing collections of data about disparate objects (e.g. different types) (type list)</li>
+<li><strong>Dictionaries</strong> - unordered collections of key-value pairs, where each key has to be unique and immutable (type dict)<ul>
+<li><code>.get()</code> - Takes a key from which to return the associated value, or a default argument if that key is not in the dictionary</li>
+<li><code>.iteritems()</code> - Returns a generator that can be used to iterate over the key, value pairs of the dictionary</li>
+<li><code>.update()</code> - Update one dict with the key, value pairs</li>
+</ul>
+</li>
+<li><strong>Sets</strong> - unordered collections of unique keys, where each key is immutable (type set)<ul>
+<li>empty curly brackets <code>{}</code> are interpreted as a dict. Initiate with <code>my_set = set()</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Immutability</strong> - Refers to a data structure whose state cannot
+be modified after it has been created     <ul>
+<li><strong>Tuples</strong> - ordered, static collections that are meant for storing unchanging pieces of data (type tuple)  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Compare the strengths and weaknesses of lists vs. dictionaries.<ul>
+<li>Lists and dictionaries are both mutable data storage "containers" for storing a variety or objects.  Lists are ordered, and you potentially have to iterate through all the values to search the object inside it.  Dictionaries are unordered, and the hash maps of their immutable keys allow for O(1) recall speed, but the storage of the key:item pairings takes up more memory.</li>
+</ul>
+</li>
+<li>Choose the appropriate collection (dict, Counter, defaultdict) to simplify a problem.</li>
+<li>Compare the strengths and weaknesses of lists vs. generators.<ul>
+<li><strong>Generators</strong> - Allow us to build up an iterator that evaluates lazily (only loads values into memory when explicitly needed to perform some calculation/operation)<ul>
+<li><code>xrange()</code> is the generator equivalent of <code>range()</code></li>
+<li><code>izip()</code> is the generator equivalent of <code>zip()</code></li>
+<li><code>iteritems()</code> on a dictionary is the generator equivalent of <code>items()</code></li>
+</ul>
+</li>
+<li>Use a generator unless you need to use all items at once</li>
+<li>If the data can’t all fit in memory at the same time, then we are forced to use a generator (common in image processing or large data applications)</li>
+</ul>
+</li>
+<li>Write <strong>pythonic code</strong>.<ul>
+<li>Writing Pythonic code means we are using the language in such a way that makes our code more readable while (often) at the same time using Python’s power to make your solution more optimal</li>
+<li>Using <code>enumerate()</code> if we need to use the index</li>
+<li>Using <code>with</code> statements when working with files</li>
+<li>Using <code>izip()</code> to iterate over two lists at the same time</li>
+<li>Using a set to check membership list (and other) comprehensions <code>squares = [x**2 for x in xrange(1000)]</code></li>
+<li><code>if x:</code> instead of <code>if x == True:</code></li>
+<li><a href="https://www.python.org/dev/peps/pep-0008/">Pep8 Style Guide</a></li>
+<li><a href="http://python-future.org/imports.html">Python 2 vs 3 Import Guide</a></li>
+</ul>
+</li>
+</ol>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="https://github.com/thomasdunlap">GitHub</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="https://www.linkedin.com/in/thomas-dunlap/">LinkedIn</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

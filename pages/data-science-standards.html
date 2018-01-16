@@ -23,32 +23,34 @@
 <section id="content" class="body">
     <h1 class="entry-title">Data Science Standards</h1>
     
-    <h1><em>Based off of the <a href="https://www.galvanize.com/san-francisco/data-science">Galvanize Data Science Intensive</a></em></h1>
-<h3>What is a Standard?</h3>
+    <h1><strong>Questions from the <a href="https://www.galvanize.com/san-francisco/data-science">Galvanize Data Science Intensive</a></strong></h1>
+<h2><em>Answers from my own education and research.</em></h2>
 <hr>
-<p>Standards are the core-competencies of data scientists - the knowledge, skills, and habits needed to be hirable.</p>
+<h3>What is a Standard?</h3>
+<p><strong>Standards are the core-competencies of data scientists - the knowledge, skills, and habits needed to be hirable.</strong></p>
+<hr>
 <h3>Standards by Topic</h3>
 <hr>
 <h4><strong>1. Python</strong></h4>
 <ol>
 <li>Explain the difference between mutable and immutable types and their relationship to dictionaries.<ul>
-<li><em>Mutable</em> - Refers to a data structure whose state can be altered after it has been created<ul>
-<li><em>Lists</em> - ordered, dynamic collections that are meant for storing collections of data about disparate objects (e.g. different types) (type list)</li>
-<li><em>Dictionaries</em> - unordered collections of key-value pairs, where each key has to be unique and immutable (type dict)<ul>
+<li><strong>Mutable</strong> - Refers to a data structure whose state can be altered after it has been created<ul>
+<li><strong>Lists</strong> - ordered, dynamic collections that are meant for storing collections of data about disparate objects (e.g. different types) (type list)</li>
+<li><strong>Dictionaries</strong> - unordered collections of key-value pairs, where each key has to be unique and immutable (type dict)<ul>
 <li><code>.get()</code> - Takes a key from which to return the associated value, or a default argument if that key is not in the dictionary</li>
 <li><code>.iteritems()</code> - Returns a generator that can be used to iterate over the key, value pairs of the dictionary</li>
 <li><code>.update()</code> - Update one dict with the key, value pairs</li>
 </ul>
 </li>
-<li><em>Sets</em> - unordered collections of unique keys, where each key is immutable (type set)<ul>
+<li><strong>Sets</strong> - unordered collections of unique keys, where each key is immutable (type set)<ul>
 <li>empty curly brackets <code>{}</code> are interpreted as a dict. Initiate with <code>my_set = set()</code></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><em>Immutability</em> - Refers to a data structure whose state cannot
+<li><strong>Immutability</strong> - Refers to a data structure whose state cannot
 be modified after it has been created     <ul>
-<li><em>Tuples</em> - ordered, static collections that are meant for storing unchanging pieces of data (type tuple)  </li>
+<li><strong>Tuples</strong> - ordered, static collections that are meant for storing unchanging pieces of data (type tuple)  </li>
 </ul>
 </li>
 </ul>
@@ -59,7 +61,7 @@ be modified after it has been created     <ul>
 </li>
 <li>Choose the appropriate collection (dict, Counter, defaultdict) to simplify a problem.</li>
 <li>Compare the strengths and weaknesses of lists vs. generators.<ul>
-<li><em>Generators</em> - Allow us to build up an iterator that evaluates lazily (only loads values into memory when explicitly needed to perform some calculation/operation)<ul>
+<li><strong>Generators</strong> - Allow us to build up an iterator that evaluates lazily (only loads values into memory when explicitly needed to perform some calculation/operation)<ul>
 <li><code>xrange()</code> is the generator equivalent of <code>range()</code></li>
 <li><code>izip()</code> is the generator equivalent of <code>zip()</code></li>
 <li><code>iteritems()</code> on a dictionary is the generator equivalent of <code>items()</code></li>
@@ -69,7 +71,7 @@ be modified after it has been created     <ul>
 <li>If the data can’t all fit in memory at the same time, then we are forced to use a generator (common in image processing or large data applications)</li>
 </ul>
 </li>
-<li>Write pythonic code.<ul>
+<li>Write <strong>pythonic code</strong>.<ul>
 <li>Writing Pythonic code means we are using the language in such a way that makes our code more readable while (often) at the same time using Python’s power to make your solution more optimal</li>
 <li>Using <code>enumerate()</code> if we need to use the index</li>
 <li>Using <code>with</code> statements when working with files</li>
@@ -502,11 +504,19 @@ Describe, interpret, and visualize the model form of linear regression: Y = B0+B
 <li>Configure a machine to use spark effectively  </li>
 <li>Describe differences and similarities between MapReduce and Spark  </li>
 <li>Get data into spark for processing.</li>
-<li>Describe lazy evaluation in the context of Spark.</li>
+<li>Describe lazy evaluation in the context of Spark.<ul>
+<li>Spark stores <em>transformations</em> for future use, when called by an <em>action</em></li>
+</ul>
+</li>
 <li>Cache RDDs effectively to improve performance.</li>
-<li>Use Spark to do compute basic statistics</li>
-<li>Know the difference between Spark data types: RDD, DataFrame, DAG</li>
-<li>Use MLLib</li>
+<li>Use Spark to compute basic statistics</li>
+<li>Know the difference between Spark data types: RDD, DataFrame, DAG<ul>
+<li><strong>RDD</strong>: Resilient Distributed Datasets; Distributed across cluster of partitions (chunks of data); Can recover from loss of individual partitions, nodes, slow processes; partitions immutable and traceable for repeatability.</li>
+<li><strong>DAG</strong>: Directed Acyclic Graph;</li>
+</ul>
+</li>
+<li>Use MLLib
+https://spark.apache.org/docs/latest/ml-guide.html</li>
 </ol>
 <h4><strong>39. SQL in Spark</strong></h4>
 <ol>
