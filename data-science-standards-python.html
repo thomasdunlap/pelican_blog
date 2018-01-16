@@ -30,8 +30,8 @@
 
     <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2018-12-16T13:35:00-07:00">
-                Published: Sun 16 December 2018
+        <abbr class="published" title="2018-01-16T13:35:00-07:00">
+                Published: Tue 16 January 2018
         </abbr>
 
         <address class="vcard author">
@@ -69,7 +69,12 @@ be modified after it has been created     <ul>
 <li>Lists and dictionaries are both mutable data storage "containers" for storing a variety or objects.  Lists are ordered, and you potentially have to iterate through all the values to search the object inside it.  Dictionaries are unordered, and the hash maps of their immutable keys allow for O(1) recall speed, but the storage of the key:item pairings takes up more memory.</li>
 </ul>
 </li>
-<li>Choose the appropriate collection (dict, Counter, defaultdict) to simplify a problem.</li>
+<li>Choose the appropriate collection (dict, Counter, defaultdict) to simplify a problem.<ul>
+<li><code>dict()</code> is a standard Python dictionary.</li>
+<li><code>defaultdict()</code> will automatically add keys that don't exist.</li>
+<li><code>Counter</code> does not automatically add keys, but does come with built-in multiset functions.</li>
+</ul>
+</li>
 <li>Compare the strengths and weaknesses of lists vs. generators.<ul>
 <li><strong>Generators</strong> - Allow us to build up an iterator that evaluates lazily (only loads values into memory when explicitly needed to perform some calculation/operation)<ul>
 <li><code>xrange()</code> is the generator equivalent of <code>range()</code></li>
