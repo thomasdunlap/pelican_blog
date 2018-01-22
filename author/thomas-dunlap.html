@@ -23,7 +23,78 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/a-brief-overview-of-the-web.html">A Brief Overview of the Web</a></h1>
+                    <h1 class="entry-title"><a href="/data-science-standards-python-oop.html">Data Science Standards: Python OOP</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2018-01-21T23:10:00-07:00">
+                Published: Sun 21 January 2018
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/thomas-dunlap.html">Thomas Dunlap</a>
+        </address>
+<p>In <a href="/category/main.html">main</a>.</p>
+<p>tags: <a href="/tag/data-science-standards-python.html">data-science-standards python</a> </p>
+</footer><!-- /.post-info --><h4>Part 3 of 43</h4>
+<p>This is the third in a series of questions and answers about core data science topics.  See more standards on my <a href="https://thomasdunlap.github.io/pages/data-science-standards.html">Data Science Standards page</a>.</p>
+<h4><strong>3. OOP</strong></h4>
+<ol>
+<li>Given the code for a python class, instantiate a python object and call the methods and list the attributes.</li>
+<li>Write the python code for a simple class.</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ClassName</span><span class="p">:</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameter1</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">var</span> <span class="o">=</span> <span class="n">parameter1</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">var2</span> <span class="o">=</span> <span class="n">p2</span>
+
+  <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Return a text description.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;{} of {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">var</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">var2</span><span class="p">)</span>
+
+  <span class="nd">@property</span> <span class="c1"># Field can&#39;t be changed w/o making setter (@color.setter)</span>
+  <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_c_map</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">p2</span><span class="p">]</span>
+
+  <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elem</span><span class="p">):</span>
+  <span class="sd">&#39;&#39;&#39;Perform map operation on an element&#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_impl</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">_impl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elem</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+  <span class="k">def</span> <span class="nf">method_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p3</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">var2</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">var</span> <span class="o">*</span> <span class="n">p3</span>
+</pre></div>
+
+
+<ol>
+<li>
+<p>Match key “magic” methods to their functionality.
+Full list/tutorial here:
+http://www.diveintopython3.net/special-method-names.html</p>
+</li>
+<li>
+<p>Design a program or algorithm in object oriented fashion.</p>
+</li>
+<li>Compare and contrast functional and object oriented programming.<ul>
+<li>In OOP the user creates and defines a new data type, which it's own attributes (data), and methods (operations).  This new class can then be used to create objects.</li>
+<li>In functional programming, your program just uses functions and does not create an entirely new class to organize data around.</li>
+<li>Functional programming typically is faster, takes up less memory, but can less organized and difficult for humans to interpret if there's a lot going on.</li>
+</ul>
+</li>
+</ol>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/a-brief-overview-of-the-web.html" rel="bookmark"
+                           title="Permalink to A Brief Overview of the Web">A Brief Overview of the Web</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2018-01-19T11:10:00-07:00">
                 Published: Fri 19 January 2018
@@ -34,14 +105,11 @@
         </address>
 <p>In <a href="/category/main.html">main</a>.</p>
 <p>tags: <a href="/tag/pelican.html">pelican</a> </p>
-</footer><!-- /.post-info --><p>There are <strong>clients</strong> and <strong>servers</strong>.  Clients are typically anything a person would use to access the internet, and servers are the computers that store the code web pages are built upon.  Clients send requests, and servers send back responses.</p>
-<p><strong>Transmission Control Protocol and Internet Protocol</strong> (<strong>TCP/IP</strong>) is the set of rules that governs that transport of data across the web. <strong>Domain Name Servers</strong> (<strong>DNS</strong>) is the address of the server a web site is stored on.  <strong>Hyptertext Transfer Protocol</strong> is the language used between client and server.  Websites are made up of <strong>component files</strong>, typically the <strong>code</strong> files which represent the structure of the site, and the <strong>assets</strong>, which represent content files like images, video, PDFs, etc.</p>
-<p>The browser finds the DNS, and from there the website you are trying to load by it's <strong>IP address</strong>.  The browser then sends an HTTP request to the server, asking for a copy of that website via TCP/IP.  If the server sends back a <strong>"200 OK!"</strong> message, the website copy will be sent to the client in <strong>data packets</strong>. The client then pieces these packets together to form the website on your screen.  By sending little packets, it allows for thousands of users to download the website at the same time, and not have to wait for the entire website to load on one computer, before starting the process over again with a second.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                <p>There are <strong>clients</strong> and <strong>servers</strong>.  Clients are typically anything a person would use to access the internet, and servers are the computers that store the code web pages are built upon.  Clients send requests, and servers send back responses.</p>
+<p><strong>Transmission Control Protocol and Internet Protocol</strong> (<strong>TCP/IP</strong>) is the set …</p>
+                <a class="readmore" href="/a-brief-overview-of-the-web.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -234,30 +302,11 @@
                 <a class="readmore" href="/second-post.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/welcome-to-the-machine-learning-blog.html" rel="bookmark"
-                           title="Permalink to Welcome to the Machine Learning Blog">Welcome to the Machine Learning Blog</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2017-09-23T22:32:00-06:00">
-                Published: Sat 23 September 2017
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/thomas-dunlap.html">Thomas Dunlap</a>
-        </address>
-<p>In <a href="/category/main.html">main</a>.</p>
-<p>tags: <a href="/tag/welcome.html">welcome</a> </p>
-</footer><!-- /.post-info -->                <h1>Welcome to the Machine Learning Blog!</h1>
-<p>This is an experiment in pelican blogging.  My goal is to summarize some educational content on my way to becoming a Machine Learning Engineer.  I have little idea what I'm doing at the moment, and hopefully that will show less and less over time …</p>
-                <a class="readmore" href="/welcome-to-the-machine-learning-blog.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
                 </ol><!-- /#posts-list -->
+<p class="paginator">
+    Page 1 / 2
+        <a href="/author/thomas-dunlap2.html">&raquo;</a>
+</p>
                 </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
